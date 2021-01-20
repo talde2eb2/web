@@ -1,0 +1,133 @@
+html {
+  font-size: 100%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #e9ebee;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+  /* Header barneko gauzak */
+#header {
+  display: grid;
+}
+
+  /* nabigatzailearen gaineko menua (tlfno) */
+#navbar-cont {
+  background-color: rgb(109, 109, 109);
+  width: 100%;
+  color: white;
+  padding: 0.5rem;
+}
+
+    /* nabigatzaile barra, header barnean */
+#navbar {
+    background-color: #fcfcfc;
+    display: grid;
+    min-height: 50px;
+    grid-auto-flow: column;
+    grid-gap: 1.5em;
+    padding: 0 40px;
+    width: 100%; 
+    position: fixed;
+  }
+
+    /* logoa nabitzaile barran */
+  #logoa {
+    background-color: transparent;
+    height: 50px;
+    width: 80px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  nav div ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav div li {
+    display: inline;
+    position: relative;
+    left: 30px;
+  }
+
+    /* listaren ezaugarriak */
+  .menu-list {
+    display: grid;
+    justify-content: right;
+    align-content: center;
+    grid-auto-flow: column;
+    grid-gap: 1.5em;
+    font-family: "Open Sans", sans-serif;
+  }
+
+
+   /* nagusia atala 1 */
+#nag-atal {
+  background-color: transparent;
+  height: 500px;
+  background-image: url("../img/emotionheader.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.2;
+}
+
+  /* nor atala 1 */
+#nor-atal {
+  background: linear-gradient(160.71deg, #971014 0%, #ff7176 100%);
+  height: 500px;
+}
+
+/* zerbitzu atala 3 */
+#zer-atal {
+  background-color: transparent;
+  height: 500px;
+  background-image: url("../img/motorguantes.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.5;
+}
+
+/* birziklapen atala 4 */
+#bir-atal {
+    background-color: gray;
+    height: 300px;
+}
+
+/* harremana atala 5 */
+#har-atal {
+    background-color: rgb(250, 248, 248);
+    height: 300px;
+}
+
+/* + oina */
+footer {
+    background-color: rgb(71, 71, 71);
+    height: 100px;
+}
+
+
+
+/* tableta ==================== */
+@media screen and (min-width: 600px) {
+  body {
+  }
+}
+
+
+
+/* Ordenagailu ==================== */
+@media screen and (min-width: 1000px) {
+  body {
+  }
+}
