@@ -4,50 +4,97 @@
     <title>Rekord Autoak</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     
     <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
+    <!-- Edukiontzia guztia .................................-->
+<div id="edukiontzia" class="edukiontzia">
 
     <!-- Header LOGO ta MENUA-->
-  <header>
-    <div id="header">
-        <div id="navbar-cont">
-            <div id="header-tfno" class="header-tfno">
-                <a href="tel:+34666555333">+34 666 555 333</a>
+    <header>
+        <div class="barrabaltz">  <!-- Goiko barra baltza -->
+            <div id="sasozbaltz">
+                <img src="img/i-twitter-icon.png" alt="twitter" width="20" height="20"> 
+                <img src="img/i-instagram-icon.png" alt="instagram" width="20" height="20"> 
+                <img src="img/i-facebook-icon.png" alt="facebook" width="20" height="20">
             </div>
         </div>
-        <!-- nav eta logoa-->
-        <nav>
-            <div id="navbar">
-                <div id="logoa">
-                    <img src="img/workshopmate-bota.png" alt="logo Rekord">
-                </div>
+        <div class="logo-nav">
+            <div class="logo">  <!-- logo div-a -->
+                <img src="img/logoRA_psd.png" alt="ReKord Autoak logo" width="341" height="74"> 
+            </div>
+            <nav class="nav"> <!-- nabigatzailea div-a -->
                 <ul class="menu-list">
-                    <li class="nav-list"><a href="#">Nagusia</a></li>
-                    <li class="nav-list"><a href="#">Nor gara</a></li>
+                    <li><a href="#">Nagusia</a></li>
+                    <li><a href="#">Nor gara</a></li>
                     <li class="nav-list"><a href="#">Zerbitzuak</a></li>
                     <li class="nav-list"><a href="#">Birziklapen politika</a></li>
                     <li class="nav-list"><a href="#">Harremana</a></li>
                 </ul>
-            </div>
-        </nav>
+            </nav>
+        </div>
+    </header>
+
+        <!-- P1 nagusia atala + norgara--> <!-- aldatuta-->
+    <div id="P0nagusia" class="atalak">
+        <!--<img src="img2/nag1.png" alt="footer" width="1000" height="500">-->
     </div>
-  </header>
-
-  <div id="nag-atal">
-  </div>
-  <div id="nor-atal">
-  </div>
-  <div id="zer-atal">
-  </div>
-  <div id="bir-atal">
-  </div>
-  <div id="har-atal">
-  </div>
+    <div id="P1norgara" class="atalak">
+        
+    </div>
+        <!-- P2 zerbitzuak atala-->
+    <div id="P2zerbitzuak" class="atalak">
+        <div id="P2zer" class="tituluak">ZERBITZUAK</div>
+        <article id="P2zer1" class="P2zer">
+            <img src="img/z1.jpg" alt="zerbitzuak image">
+            <p>111111111</p>
+            <p>txt text</p>
+        </article>
+        <article id="P2zer2" class="P2zer">
+            <img src="img/z2.jpg" alt="zerbitzuak image">
+            <p>111111111</p>
+            <p>txt text</p>
+        </article>
+        <article id="P2zer3" class="P2zer">
+            <img src="img/z3.jpg" alt="zerbitzuak image">
+            <p>111111111</p>
+            <p>txt text</p>
+        </article>
+        <article id="P2zer4" class="P2zer">
+            <img src="img/z4.jpg" alt="zerbitzuak image">
+            <p>111111111</p>
+            <p>txt text</p>
+        </article>
+    </div>
+        <!-- P3 birziklapena atala-->
+    <div id="P3birziklapena" class="atalak">
+        <img src="img2/birzi.png" alt="footer" width="1000" height="500">
+    </div>
+        <!-- P4 harremana atala-->
+    <div id="P4harremana" class="atalak">
+        <img src="img2/harre.png" alt="footer" width="1000" height="500">
+            <!-- Formularioen taldea -->
+        <fieldset>
+            <legend><b>Gurekin harremandu:</b></legend>
+            <label for="fname">Izena:</label>
+            <input type="text" id="fname" name="fname"><br><br>
+            <label for="lname">Abizenak:</label>
+            <input type="text" id="lname" name="lname"><br><br>
+            <label for="email">Email-a:</label>
+            <input type="email" id="email" name="email"><br><br>
+            <label for="birthday">jaiotze data:</label>
+            <input type="date" id="birthday" name="birthday"><br><br>
+            <input type="submit" value="Sartu">
+        </fieldset>
+</div>
+  
+    <!-- Footer------------------- -->
   <footer>
+    <div class="footerclass">
+        <img src="img2/navigation.png" alt="footer" width="1000" height="200"> 
 
+    </div>
   </footer>
+</div> <!-- edukiontzia amaiera -->
 </body>
-</html>
