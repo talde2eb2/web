@@ -1,133 +1,288 @@
 html {
-  font-size: 100%;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  box-sizing: border-box;
-}
+    box-sizing: border-box;
+  }
 
 body {
-  margin: 0;
   background-color: #e9ebee;
+  font-family: 'Open Sans', sans-serif;
 }
 
-*, *::before, *::after {
-  box-sizing: inherit;
+  /* LINKS ------------------------------- */
+  /* unvisited link */
+a:link {
+  color: black;
 }
 
-  /* Header barneko gauzak */
-#header {
-  display: grid;
+/* visited link */
+a:visited {
+  color: black;
 }
-
-  /* nabigatzailearen gaineko menua (tlfno) */
-#navbar-cont {
-  background-color: rgb(109, 109, 109);
-  width: 100%;
-  color: white;
-  padding: 0.5rem;
-}
-
-    /* nabigatzaile barra, header barnean */
-#navbar {
-    background-color: #fcfcfc;
-    display: grid;
-    min-height: 50px;
-    grid-auto-flow: column;
-    grid-gap: 1.5em;
-    padding: 0 40px;
-    width: 100%; 
-    position: fixed;
-  }
-
-    /* logoa nabitzaile barran */
-  #logoa {
-    background-color: transparent;
-    height: 50px;
-    width: 80px;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  nav div ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
   
-  nav div li {
-    display: inline;
-    position: relative;
-    left: 30px;
-  }
+  /* mouse over link */
+a:hover {
+  color: red;
+}
 
-    /* listaren ezaugarriak */
-  .menu-list {
+  /* selected link */
+a:active {
+  color: gray;
+}
+
+   /* GRID orokorra ataletarako eta background irudia*/
+.edukiontzia {
+  margin-right: auto;
+  margin-left: auto;
+        /* grid lodia vvv */
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 0;
+        /* background irudia vvv */
+  background-attachment: fixed;
+  background-image: url("../img/auto-repair-1954636_1280.jpg");
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+
+    /* HEADER barneko gauzak ----HASIERA---------------------*/
+#header {
+  height: 100%;
+}
+
+    /* nabigatzailearen gainekoa (tfno + sare soz) */
+.barrabaltz {
+  background-color: #333;
+  width: 100%;
+}
+
+    /* Goiko sare sozialen div-a */
+#sasozbaltz {
+  padding-left: 25px;
+}
+
+  /* logo eta nav-aren div-a */
+.logo-nav {
+    position: fixed;
+    background-color: #fff;
+    width: 100%;
     display: grid;
-    justify-content: right;
-    align-content: center;
-    grid-auto-flow: column;
-    grid-gap: 1.5em;
-    font-family: "Open Sans", sans-serif;
-  }
+    grid-template-areas: 'lg nv nv';
+}
 
+.logo {
+    grid-area: lg;
+    padding-left: 15px;
+}
 
-   /* nagusia atala 1 */
-#nag-atal {
+.nav {
+    grid-area: nv;
+    padding-bottom: 20px;
+    padding-right: 15;
+}
+
+  /* ul-aren class-a */
+.menu-list {
+  display: grid;
+  justify-content: right;
+  align-content: center;
+  grid-auto-flow: column;
+  grid-gap: 1.5em;
+  list-style-type: none;
+  float: right;
+  padding: 10px 10px 10px 10px;
+}
+
+    /* HEADER ------ AMAIERA ^^^------------------*/
+
+   /* atal guztietako grid oinarria (atalak) */
+.atalak {
+
+} 
+
+  /*atal bakoitzeko titulua  */
+.titulua {
+  /*font-family: url("../font/Capsmall_clean.ttf");*/
+  font-family: 'Courier New', Courier, monospace;
+  color: red;
+}
+
+/* 3. atala nagusia----------- */
+#atala-nag {
+ 
+}
+
+/* 2. atala nor gara----------- */
+#atala-nor {
+  height: 200px;
   background-color: transparent;
-  height: 500px;
-  background-image: url("../img/emotionheader.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  opacity: 0.2;
 }
 
-  /* nor atala 1 */
-#nor-atal {
-  background: linear-gradient(160.71deg, #971014 0%, #ff7176 100%);
-  height: 500px;
+/* 3. atala zerbitzuak----------- */
+#atala-zer {
+  background-color: rgba(255, 255, 255, 0.849);
+  display:flex;
+  flex-wrap: wrap;
 }
 
-/* zerbitzu atala 3 */
-#zer-atal {
-  background-color: transparent;
-  height: 500px;
-  background-image: url("../img/motorguantes.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  opacity: 0.5;
+    /* zerbitzuakeko div-en grid-erako izendatuko kuadroak  */
+#titulu-atala {
+
+  grid-area: t;
 }
 
-/* birziklapen atala 4 */
-#bir-atal {
-    background-color: gray;
-    height: 300px;
+#bat {
+  grid-area: a;
 }
 
-/* harremana atala 5 */
-#har-atal {
-    background-color: rgb(250, 248, 248);
-    height: 300px;
+#bi {
+  grid-area: b;
 }
 
-/* + oina */
-footer {
-    background-color: rgb(71, 71, 71);
-    height: 100px;
+#hiru {
+  grid-area: c;
 }
 
+#lau {
+  grid-area: d;
+}
 
+   /* zerbitzuak div-en kuadro bakoitza */
+.cuadro {
 
-/* tableta ==================== */
-@media screen and (min-width: 600px) {
-  body {
+}
+
+.cuadro>img {
+  height: 150px;
+  width: 200px;
+  padding: 1em 0.5em 0.5em 0.5em;
+  border: rgb(8, 8, 8);
+  width: 230px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cuadro-text {
+  background-color: rgba(110, 98, 98, 0.849);
+  padding: 0.25em 0.5em 0.5em 0.5em;
+  margin: 1em;
+  text-align: center;
+}
+
+/* 4. atala birziklapena ----------- */
+#atala-bir {
+    background-color: rgb(89, 145, 89);
+}
+
+/* 5. atala harremana----------- */
+#atala-har {
+    height: 600px;
+    background-color: #975e61;
+    display: flex;
+    flex-direction: row;
+}
+
+iframe {
+  border: 0;
+  tabindex: 0;
+}
+
+/* Start: Google Maps Responsive */
+.map-responsive {
+  overflow:hidden;
+  padding-bottom:400px; /*Reduce este valor si el mapa fuera muy alto, por ejemplo 250px, puedes usar porcentajes, 50%*/
+  position:relative;
+  height:0;
+}
+.map-responsive iframe{
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  position:relative;
+}
+/* End: Google Maps Responsive */
+
+  /* Fieldset, formularioen taldea  -----------*/
+fieldset {
+  background-color:  #9e151b;
+  color:  white;
+}
+
+   /* Fieldset, legend */
+legend {
+  background-color: #9e151b;
+  color: white;
+  padding: 5px 10px;
+}
+
+  /* Fieldset, input ----------------*/
+input {
+  margin: 5px;
+}
+
+.footerclass {
+    height: 200px;
+    background-color: #131313;
+}
+
+/* TABLET mediano, para anchos de pantalla de entre 480 y 800px */ 
+@media screen and (min-width:480px) {
+
+  #atala-zer  {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "t t"
+    "a b"
+    "c d";
+  }
+  #atala-bir  {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "t t"
+    "a a"
+    "b b"
+    "c c"
+    "d d";
+  }
+}
+
+/* ORDENADOR grande, para anchos de pantalla de entre 800 y 1280px */ 
+@media screen and (min-width:800px) {
+
+  #atala-zer  {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "t t t t"
+    "a b c d";
+  }
+
+  #atala-bir  {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    grid-template-areas:
+    "t t t t"
+    "a a a b"
+    "c c d d";
   }
 }
 
 
+   /***tablet** APÛNTEA KENTZEKO*/ 
+/*
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-areas:
+   "a b"
+   "c d";
 
-/* Ordenagailu ==================== */
-@media screen and (min-width: 1000px) {
-  body {
-  }
-}
+   /****PC****//*
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   grid-template-areas:
+   "a b c d";
+*/
