@@ -32,11 +32,9 @@ a:active {
 .edukiontzia {
   margin-right: auto;
   margin-left: auto;
-  height: 1fr; 
         /* grid lodia vvv */
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(3, 1fr);
   grid-gap: 0;
         /* background irudia vvv */
   background-attachment: fixed;
@@ -93,65 +91,117 @@ a:active {
   list-style-type: none;
   float: right;
   padding: 10px 10px 10px 10px;
-  z-index: 10;
 }
+
     /* HEADER ------ AMAIERA ^^^------------------*/
 
    /* atal guztietako grid oinarria (atalak) */
 .atalak {
-  display: flex;
-  /*justify-content: center;*/
-  padding-left: 0;
-  padding-right: 0;
+
 } 
 
   /*atal bakoitzeko titulua  */
-.tituluak {
-  font-family: url("../font/Capsmall_clean.ttf");
+.titulua {
+  /*font-family: url("../font/Capsmall_clean.ttf");*/
+  font-family: 'Courier New', Courier, monospace;
   color: red;
 }
 
-/* P2zerbitzuko irudiak  */
-.P2zer img {
-  height: 150px;
-  width: 200px;
-  padding: 2em 0.5em 0.5em 0.5em;
-}
-
-  /* atalak Pn */
-#P0nagusia {
+/* 3. atala nagusia----------- */
+#atala-nag {
  
 }
 
-#P1norgara {
+/* 2. atala nor gara----------- */
+#atala-nor {
   height: 200px;
   background-color: transparent;
 }
 
-#P2zerbitzuak {
-    background-color: rgba(255, 255, 255, 0.849);
+/* 3. atala zerbitzuak----------- */
+#atala-zer {
+  background-color: rgba(255, 255, 255, 0.849);
+  display:flex;
+  flex-wrap: wrap;
 }
 
-/* P2zerbitzuko irudiak  */
-.P2zer img {
+    /* zerbitzuakeko div-en grid-erako izendatuko kuadroak  */
+#titulu-atala {
+
+  grid-area: t;
+}
+
+#bat {
+  grid-area: a;
+}
+
+#bi {
+  grid-area: b;
+}
+
+#hiru {
+  grid-area: c;
+}
+
+#lau {
+  grid-area: d;
+}
+
+   /* zerbitzuak div-en kuadro bakoitza */
+.cuadro {
+
+}
+
+.cuadro>img {
   height: 150px;
   width: 200px;
-  padding: 2em 0.5em 0.5em 0.5em;
+  padding: 1em 0.5em 0.5em 0.5em;
+  border: rgb(8, 8, 8);
+  width: 230px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.P2zer {
-  height: 300px;
-  background-color: rgba(201, 26, 26, 0.849);
+.cuadro-text {
+  background-color: rgba(110, 98, 98, 0.849);
+  padding: 0.25em 0.5em 0.5em 0.5em;
+  margin: 1em;
+  text-align: center;
 }
 
-#P3birziklapena {
-    background-color: transparent;
+/* 4. atala birziklapena ----------- */
+#atala-bir {
+    background-color: rgb(89, 145, 89);
 }
 
-#P4harremana {
+/* 5. atala harremana----------- */
+#atala-har {
     height: 600px;
     background-color: #975e61;
+    display: flex;
+    flex-direction: row;
 }
+
+iframe {
+  border: 0;
+  tabindex: 0;
+}
+
+/* Start: Google Maps Responsive */
+.map-responsive {
+  overflow:hidden;
+  padding-bottom:400px; /*Reduce este valor si el mapa fuera muy alto, por ejemplo 250px, puedes usar porcentajes, 50%*/
+  position:relative;
+  height:0;
+}
+.map-responsive iframe{
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  position:relative;
+}
+/* End: Google Maps Responsive */
 
   /* Fieldset, formularioen taldea  -----------*/
 fieldset {
@@ -176,17 +226,63 @@ input {
     background-color: #131313;
 }
 
-
 /* TABLET mediano, para anchos de pantalla de entre 480 y 800px */ 
 @media screen and (min-width:480px) {
 
-  
-	}
+  #atala-zer  {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "t t"
+    "a b"
+    "c d";
+  }
+  #atala-bir  {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "t t"
+    "a a"
+    "b b"
+    "c c"
+    "d d";
+  }
 }
 
 /* ORDENADOR grande, para anchos de pantalla de entre 800 y 1280px */ 
 @media screen and (min-width:800px) {
 
+  #atala-zer  {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "t t t t"
+    "a b c d";
+  }
 
-	}
+  #atala-bir  {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    grid-template-areas:
+    "t t t t"
+    "a a a b"
+    "c c d d";
+  }
 }
+
+
+   /***tablet** APÛNTEA KENTZEKO*/ 
+/*
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-areas:
+   "a b"
+   "c d";
+
+   /****PC****//*
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   grid-template-areas:
+   "a b c d";
+*/
